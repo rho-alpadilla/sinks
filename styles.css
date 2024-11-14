@@ -1,35 +1,123 @@
-/* Outdated CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #43485c;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
-h1 {
+header {
+    background-color: #282828;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+nav {
+    background-color: #333;
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
     margin: 0;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+nav li {
+    margin: 0 15px;
+    
 }
 
-li {
-    margin: 0;
-    padding: 0;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 20px;
 }
 
-p {
-    margin: 0;
-    padding: 0;
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ff7300;
+    border-radius: 20px;
 }
 
-img {
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+
+.sink-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+
+.sink-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-container img {
     width: 100%;
-    height: auto;
+    border-radius: 8px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+
+footer {
+    background-color: #282828;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ff7300;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
